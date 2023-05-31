@@ -10,15 +10,15 @@ const co = require('./co')
 
 ## Use
 ```js
-co(['../','some/','/path/','image.png'])
+co(['../', 'some/', '/path/', 'image.png'])
 // Returns: '../some/path/image.png'
 
-co(['C:/','///te','mp\\\\/','\\/\\/foo/bar'])
+co(['C:/', '///te', 'mp\\\\/', '\\/\\/foo/bar'])
 // Returns: 'C:/temp/foo/bar'
 ```
 
 ### Automatic slash insertion
 ```js
-co(['../','some/','/path/','image.png'], true)
+co(['../', 'some/', '/path/', 'image.png'], true)
 // Returns: '../some/path/image.png'
 ```
