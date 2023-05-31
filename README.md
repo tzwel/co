@@ -1,2 +1,19 @@
+<p align="center"> <img src="co.png" width="auto" height="50px" alt="'co' logo" /> </p>
+
 # co
- A tiny utility to create paths from strings
+A tiny (480b) utility to create paths from strings
+
+## Import
+```js
+const co = require('./co')
+```
+
+## Use
+```js
+co(['../','some/','/path/','image.png'])
+```
+
+### Automatic slash insertion
+```js
+co(['../','some/','/path/','image.png'], true)
+```
