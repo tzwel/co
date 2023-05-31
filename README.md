@@ -19,6 +19,6 @@ co(['C:/', '///te', 'mp\\\\/', '\\/\\/foo/bar'])
 
 ### Automatic slash insertion
 ```js
-co(['../', 'some/', '/path/', 'image.png'], true)
+co(['..', 'some', 'path', 'image.png'], true)
 // Returns: '../some/path/image.png'
 ```
