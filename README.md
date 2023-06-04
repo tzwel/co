@@ -3,7 +3,7 @@
 <p align="center"> <img src="co.png" width="auto" height="50px" alt="'co' logo" /> </p>
 
 # co
-A tiny (480b) utility to create paths from strings
+A tiny (426b) utility to create paths from strings
 
 ## Import
 ```js
