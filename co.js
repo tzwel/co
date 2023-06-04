@@ -1,17 +1,18 @@
 function co(args, autoSlashes) {
-    let result = ''
+    let result = args.toString().length > 0 ? args : '.'
 
-    for (let i = 0; i < args.length; i++) {
-        let arg = args[i];
-        arg = arg.replaceAll('\\', '/')
-                 .replace(/\/{2,}/g, '/')
-
-        if (autoSlashes && i!==0 && !arg.startsWith('/') && !arg.startsWith('.')) arg = '/' + arg
-
-        result += arg
+    if (args.toString().length > 0) {
+        if (autoSlashes) {
+            result = args.join('/')
+        } else {
+            result = args.join('')
+        } 
     }
+        
+    result = result.replaceAll('\\', '/')
+    .replace(/\/{2,}/g, '/')
+    .replace(/\/+$/g, '')
 
-    result = result.replace(/\/+$/g, '').replace(/\/{2,}/g, '/')
     return result
 }
 
